@@ -680,5 +680,8 @@ header nav ul li a:hover {
     .subscribe form input[ type="email"]::placeholder {
         font-size: 1;
     }
+    .footer {
+        padding-top: 5rem;
+    }
     
 }
