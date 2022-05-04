@@ -447,6 +447,7 @@ header nav ul li a:hover {
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
+    Padding-top:1rem;
 }
 
 .contact-grid form {
