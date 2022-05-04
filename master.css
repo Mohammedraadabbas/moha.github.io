@@ -489,9 +489,9 @@ header nav ul li a:hover {
 }
 
 .contact-grid form .inbox input:focus ~ label ,
-.contact-grid form .inbox input:focus ~ label,
+.contact-grid form .inbox input:valid ~ label,
 .contact-grid form .inbox textarea:focus ~ label ,
-.contact-grid form .inbox textarea:focus ~ label {
+.contact-grid form .inbox textarea:valid ~ label {
     top: 0;
 }
 
