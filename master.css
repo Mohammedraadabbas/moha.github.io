@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;border: none;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #f83292;
+    --second-color:#814096;
+    --white:#fff;
+    --mix-color:linear-gradient(90deg , var(--second-color) , var(--main-color))
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section {
+    padding: 0 9%;
+    min-height: 100vh;
+    padding-top: 7.5rem;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    background:var(--mix-color);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 1.7;
+    cursor: pointer;
+    box-shadow:0 .1rem .5rem rgba(0, 0, 0, 1);
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    background: var(--mix-color);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.heading h3 {
+    text-transform: uppercase;
+}
+
+/* =================header starts=================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1111111111;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    box-shadow:0 .1rem .5rem rgba(0, 0, 0, 5);
+}
+
+header input,
+header label {
+    display: none;
+}
+
+header .logo {
+    font-size: 2rem;
+}
+
+.logo span:first-child {
+    color: var(--main-color);
+}
+
+.logo span:last-child {
+    color: var(--second-color);
+    text-transform: capitalize;
+}
+
+
+header nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+}
+
+header nav ul li a {
+    color: var(--second-color);
+}
+
+header nav ul li a:hover {
+    color: var(--main-color);
+}
+
+/* =================header ends=================== */
+
+/* =================home starts=================== */
+
+.home {
+    background: url(image/home-bg-img.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .contant h3 {
+    font-size: 5.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.home .contant h3 span {
+    color: var(--main-color);
+}
+
+.home  .contant p {
+    font-size: 1.7rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.home .image img{
+    width:40vw ;
+    animation: moving 1s 0s linear alternate infinite;
+}
+
+@keyframes moving {
+    0% {
+        transform: translatey(0);
+    }
+
+    100% {
+        transform: translatey(40px);
+    }
+}
+
+
+/* =================feature starts=================== */
+
+.feature {
+    text-align: center;
+}
+
+.feature-grid {
+    margin-top: 5rem;
+    padding: 0 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    justify-content: center;
+    gap: 3rem;
+}
+
+.feature-grid div {
+    padding: 2rem 2rem ;
+    border: rgb(241 241 241) solid 2px;
+    border-radius: 5px;
+    box-shadow:0  .4rem 0.5rem rgb(207 207 207);
+    background-color: var(--white);
+    transition:  .3s 0s linear;
+}
+
+.feature-grid div:hover {
+    transform: scale(1.1);
+} 
+
+.feature-grid div h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.feature-grid div p {
+    line-height: 1.7;
+    color: #575757;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.feature-grid div .btn {
+    font-size: 1.5rem;
+}
+
+/* =================feature ends=================== */
+
+/* =================about start=================== */
+
+.about {
+    background:url(image/about-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about .about-flex {
+    display: flex;
+}
+
+.about img {
+    width: 40vw;
+}
+
+.about .content h3{
+    font-size: 3.5rem;
+    color: #333;
+}
+
+.about .content p{
+    font-size: 1.2rem;
+    line-height: 2;
+    margin: 2rem 0;
+}
+
+.about .btn {
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.about .btn i {
+    margin-right: .5rem;
+}
+
+
+/* =================about ends=================== */
+
+
+/* =================subscribe starts=================== */
+
+.subscribe {
+    background: url(image/subscribe-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+ .subscribe h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.subscribe p {
+    max-width: 70rem;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+}
+
+.subscribe form{
+    max-width: 70rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border: var(--white) 1px solid;
+    border-radius: 40px;
+    padding: .5rem;
+    margin: 2rem auto;
+}
+
+.subscribe form input[ type="email"] {
+    height: 100%;
+    background-color: transparent;
+    color: var(--white);
+    padding-left: .5rem;
+    width: 100%;
+}
+
+.subscribe form input[ type="email"]::placeholder {
+    color: var(--white);
+    font-size: 1.5rem;
+    /* padding-left: 1rem; */
+}
+
+.subscribe form input[ type="submit"] {
+    display:block;
+    text-align: center;
+    padding: .8rem 3rem;
+    background:var(--white);
+    color: black;
+    border-radius: 20px;
+    font-size: 1.5;
+    cursor: pointer;
+}
+
+.subscribe form input[ type="submit"]:hover {
+    color: var(--main-color);
+}
+
+/* =================subscribe ends=================== */
+
+
+/* =================review starts=================== */
+
+.review-grid,
+.price-grid {
+    margin-top: 5rem;
+    padding: 0 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    justify-content: center;
+    gap: 3rem;
+}
+
+.review-grid .card,
+.price-grid .card {
+    padding: 2rem 2rem ;
+    border: rgb(241 241 241) solid 2px;
+    border-radius: 5px;
+    box-shadow:0  .4rem 0.5rem rgb(207 207 207);
+    background-color: var(--white);
+    position: relative;
+    text-align: center;
+}
+
+.review-grid .card .fa-quote-right {
+    position: absolute;
+    font-size: 7.5rem;
+    color: var(--main-color);
+    opacity: .3;
+    top: 0px;
+    right: 1rem;
+}
+
+.review-grid .card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.review-grid .card h3 {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+
+.review-grid .card i {
+    color: var(--second-color);
+    font-size: 1.5rem;
+}
+
+.review-grid .card p {
+    margin: 1rem 0;
+}
+
+/* =================review ends=================== */
+
+
+/* =================prices starts=================== */
+
+.price-grid .card:nth-child(2) {
+    border: 1px solid var(--main-color);
+}
+
+.price-grid .card:not(:nth-child(2)):hover {
+    border: 1px solid var(--main-color);
+}
+
+
+.price-grid .card h3 {
+    color: var(--second-color);
+    font-size: 2rem;
+}
+
+.price-grid .card .price {
+    color: var(--main-color);
+    margin: 1rem 0;
+}
+
+.price-grid .card .price span:first-child {
+    font-size: 3.5rem;
+}
+
+.price-grid .card .price span:last-child {
+    font-size: 2rem;
+}
+
+.price-grid .card .stats {
+    margin: 1rem 0;
+}
+
+.price-grid .card .stats div {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.price-grid .card .stats div span:last-child {
+    margin-left: .5rem;
+}
+
+.price-grid .card .fa-check {
+    color: rgb(83, 228, 83);
+    font-size: 1.5rem;
+}
+
+.fa-x {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.price-grid .card .btn {
+    font-size: 1.3rem;
+    font-weight: 500;
+    box-shadow: inset;
+}
+
+/* =================prices ends=================== */
+
+
+/* =================contact us starts=================== */
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-grid form {
+    flex: 1 1 40rem;
+    background-color: var(--white);
+    border: 1px solid rgb(223, 222, 222);
+    padding: 3rem 2rem;
+    color: var(--main-color);
+    border-radius: .5rem;
+}
+
+.contact-grid form .inbox {
+    position: relative;
+}
+
+.contact-grid form .inbox input,
+.contact-grid form .inbox textarea{
+    width: 100%;
+    background-color: #fff;
+    color: #666;
+    margin: 1.5rem 0;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    border-bottom: .1rem solid rgba(0, 0, 0, .1);
+    text-transform: none;
+}
+
+.contact-grid form .inbox textarea {
+    resize: none;
+    height: 13rem;
+
+}
+.contact-grid form .inbox label {
+    position: absolute;
+    top: 1.7rem; left: 0;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    transition: .2s  0s linear;
+}
+
+.contact-grid form .inbox input:focus ~ label ,
+.contact-grid form .inbox input:focus ~ label,
+.contact-grid form .inbox textarea:focus ~ label ,
+.contact-grid form .inbox textarea:focus ~ label {
+    top: 0;
+}
+
+.contact-grid form h3 {
+    margin-bottom: 1.5rem ;
+    text-align: start;
+}
+
+.contact-grid .image {
+    flex: 1 1 30rem;
+}
+
+.contact-grid .image img {
+    width: 100%;
+}
+
+
+/* =================contact us ends=================== */
+
+/* =================footer us starts=================== */
+
+.footer {
+    padding-top: 3rem;
+    background: url(image/footer-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .footer-grid {
+    display: grid;
+    color: var(--white);
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    gap: 5rem;
+    padding: 0 2rem;
+}
+
+.footer .footer-grid h3 {
+    width: fit-content;
+    font-size: 2rem;
+    border-bottom: 2px solid #fff;
+    margin: 2rem 0;
+}
+
+.footer .footer-grid ul li{
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.footer .footer-grid li a{
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.info span {
+    background-color: #fff;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info i {
+    color: var(--main-color);
+}
+
+.copyright {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 2.5rem 0;
+    /* margin: 1rem 0; */
+    border-top: 1px solid rgb(235, 235, 235);
+}
+
+/* =================footer us ends=================== */
+
+
+
+/* media quries */
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+        overflow-x: hidden;
+    }
+    
+}
+
+@media (max-width:991px) {
+    section {
+        padding: 0 3%;
+        padding-top: 7.5rem;
+    }
+    
+
+}
+
+@media (max-width:768px) {
+    header label {
+        display: block;
+        font-size: 3rem;
+    }
+
+    header nav {
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, 2);
+        box-shadow:0 .1rem .5rem rgba(0, 0, 0, 1);
+        transform-origin: top;
+        transform: scaley(0);
+        opacity: 0;
+        transition: .2s 0s linear;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-left: 0;
+        margin: 2rem 0;
+    }
+
+    header input:checked ~ nav {
+        transform: scaley(1);
+        opacity: 1;
+    }
+
+    .home {
+        flex-flow: column-reverse;
+    }
+
+
+
+    .home h3 {
+        font-size: 3.6rem;
+    }
+    
+    .home p {
+        font-size: 1.7rem;
+    }
+
+    .home .image img{
+        width: 100%;
+    }
+
+    .about {
+        background: var(--white);
+    }
+    
+    .about .about-flex {
+        flex-flow: column;
+    }
+
+    .about .about-flex img {
+        width: 100%;
+    }
+}
+
+@media (max-width :450px) {
+    html {
+        font-size: 50%;
+        overflow-x: hidden;
+    }
+
+    .about .btn {
+        width: 100%;
+        font-size: 1.7;
+    }
+    .subscribe form {
+        padding: .3rem;
+    }
+    .subscribe form input[ type="submit"] {
+        padding: .5rem 2rem;
+    }
+    .subscribe form input[ type="email"]::placeholder {
+        font-size: 1;
+    }
+    
+}
